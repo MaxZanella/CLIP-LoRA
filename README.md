@@ -1,4 +1,7 @@
 # Low-Rank Few-Shot Adaptation of Vision-Language Models [CVPRW 2024]
+
+The official implementation of [*Low-Rank Few-Shot Adaptation of Vision-Language Models*](https://arxiv.org/abs/2405.18541).
+
 **Authors**:
 [Maxime Zanella](https://scholar.google.com/citations?user=FIoE9YIAAAAJ&hl=fr&oi=ao),
 [Ismail Ben Ayed](https://scholar.google.com/citations?user=29vyUccAAAAJ&hl=fr&oi=ao).
