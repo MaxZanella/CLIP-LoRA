@@ -75,13 +75,11 @@ lora_mha = PlainMultiheadAttentionLoRA(existing_mha, enable_lora=['q', 'k', 'v',
 If you find this project useful, please cite it as follows:
 
 ```bibtex
-@misc{zanella2024lowrank,
-      title={Low-Rank Few-Shot Adaptation of Vision-Language Models}, 
-      author={Maxime Zanella and Ismail Ben Ayed},
-      year={2024},
-      eprint={2405.18541},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{zanella2024low,
+  title={Low-Rank Few-Shot Adaptation of Vision-Language Models},
+  author={Zanella, Maxime and Ayed, Ismail Ben},
+  journal={arXiv preprint arXiv:2405.18541},
+  year={2024}
 }
 ```
 ## Acknowledgement
