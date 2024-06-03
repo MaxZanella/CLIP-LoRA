@@ -146,7 +146,7 @@ def run_lora(args, clip_model, logit_scale, dataset, train_loader, val_loader, t
                 class_embeddings = clip_model.encode_text(texts)
             text_features = class_embeddings/class_embeddings.norm(dim=-1, keepdim=True)
     else:
-        text_features = clip_weights.t().half()
+        text_features = textual_features.t().half()
         
     
     if args.encoder == 'vision' or args.encoder == 'both':
