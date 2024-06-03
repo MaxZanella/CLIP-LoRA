@@ -6,10 +6,6 @@ import torch
 
 from lora import run_lora
 
-try:
-    import wandb
-except:
-    print('wandb not available')
     
 
 def set_random_seed(seed):
@@ -38,7 +34,6 @@ def get_arguments():
     parser.add_argument('--encoder', type=str, choices=['text', 'vision', 'both'], default='both')
     parser.add_argument('--params', metavar='N', type=str, nargs='+',help='a list of strings', default=['q', 'k', 'v']) 
     
-    parser.add_argument('--wandb', action='store_true', default=False)
     
     args = parser.parse_args()
 
