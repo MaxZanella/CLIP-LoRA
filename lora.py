@@ -42,7 +42,7 @@ def run_lora(args, clip_model, logit_scale, dataset, train_loader, val_loader, t
     
     total_iters = args.n_iters * args.shots
     
-    optimizer = torch.optim.AdamW(get_lora_parameters(clip_model), weight_decay=1e2, betas=(0.9, 0.999), lr=args.lr)
+    optimizer = torch.optim.AdamW(get_lora_parameters(clip_model), weight_decay=1e-2, betas=(0.9, 0.999), lr=args.lr)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, total_iters, eta_min=1e-6)
     
     best_acc_val, best_acc_test = 0., 0.
