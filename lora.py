@@ -50,8 +50,9 @@ def run_lora(args, clip_model, logit_scale, dataset, train_loader, val_loader, t
     
     # training LoRA
     scaler = torch.cuda.amp.GradScaler()
-   
-    for it in range(total_iters):
+    count_iters = 0
+    finish = False
+    while count_iters < total_iters:
         clip_model.train()
         acc_train = 0
         tot_samples = 0
@@ -90,10 +91,16 @@ def run_lora(args, clip_model, logit_scale, dataset, train_loader, val_loader, t
             scaler.update()
             scheduler.step()
             
-        acc_train /= tot_samples
-        loss_epoch /= tot_samples
-        current_lr = scheduler.get_last_lr()[0]
-        print('LR: {:.6f}, Acc: {:.4f}, Loss: {:.4f}'.format(current_lr, acc_train, loss_epoch))
+            count_iters += 1
+            
+            if count_iters == total_iters:
+                break
+            
+        if count_iters < total_iters:
+            acc_train /= tot_samples
+            loss_epoch /= tot_samples
+            current_lr = scheduler.get_last_lr()[0]
+            print('LR: {:.6f}, Acc: {:.4f}, Loss: {:.4f}'.format(current_lr, acc_train, loss_epoch))
 
         # Eval
         if VALIDATION:
