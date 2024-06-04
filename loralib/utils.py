@@ -115,10 +115,9 @@ def apply_lora(args, clip_model):
             if i in indices:
                 for name, submodule in block.named_children(): 
                     if isinstance(submodule, nn.MultiheadAttention): 
-                        if isinstance(submodule, nn.MultiheadAttention): 
-                            new_multi_head_lora = PlainMultiheadAttentionLoRA(submodule, enable_lora=args.params, r=args.r, lora_alpha=args.alpha, dropout_rate=args.dropout_rate) 
-                            setattr(block, name, new_multi_head_lora)
-                            list_lora_layers.append(new_multi_head_lora)
+                        new_multi_head_lora = PlainMultiheadAttentionLoRA(submodule, enable_lora=args.params, r=args.r, lora_alpha=args.alpha, dropout_rate=args.dropout_rate) 
+                        setattr(block, name, new_multi_head_lora)
+                        list_lora_layers.append(new_multi_head_lora)
     
     if args.encoder == 'vision' or args.encoder == 'both':
         indices = INDEX_POSITIONS_VISION[args.backbone][args.position]
@@ -128,10 +127,9 @@ def apply_lora(args, clip_model):
             if i in indices:
                 for name, submodule in block.named_children(): 
                     if isinstance(submodule, nn.MultiheadAttention): 
-                        if isinstance(submodule, nn.MultiheadAttention):      
-                            new_multi_head_lora = PlainMultiheadAttentionLoRA(submodule, enable_lora=args.params, r=args.r, lora_alpha=args.alpha, dropout_rate=args.dropout_rate) 
-                            setattr(block, name, new_multi_head_lora)
-                            list_lora_layers.append(new_multi_head_lora)
+                        new_multi_head_lora = PlainMultiheadAttentionLoRA(submodule, enable_lora=args.params, r=args.r, lora_alpha=args.alpha, dropout_rate=args.dropout_rate) 
+                        setattr(block, name, new_multi_head_lora)
+                        list_lora_layers.append(new_multi_head_lora)
     return list_lora_layers
             
                                          
