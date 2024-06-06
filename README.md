@@ -8,7 +8,7 @@ The official implementation of [*Low-Rank Few-Shot Adaptation of Vision-Language
 
 We present CLIP-LoRA, an easy-to-use few-shot method for Vision-Language Models with fixed hyperparameters for every task and every number of shots. Here is how to run the experiments:
 
-1. [Installation](#datasets-installation) 
+1. [Installation](#installation) 
 2. [Usage](#how-to-execute-CLIP-LoRA) 
 
 This repository also aims at facilitating the usage of Low-Rank adapters (LoRA) in Vision-Language Models like CLIP:
@@ -26,8 +26,22 @@ Please consider supporting our work:
   <em>Figure 1: Low-Rank Adaptation (LoRA) is easy to use and does not create any additional inference latency.</em>
 </p>
 
+## Installation 
 
-## Datasets installation
+### Environment configuration
+
+Our code requires an environment with PyTorch installed. If you don't have one, consider creating a Python environment with:
+```bash
+conda create -y --name CLIP-LoRA python=3.10.0
+conda activate CLIP-LoRA
+```
+And install Pytorch for instance with:
+```bash
+pip3 install torch==2.0.1 torchaudio==2.0.2 torchvision==0.15.2
+```
+
+### Datasets installation
+
 Please follow [DATASETS.md](DATASETS.md) to install the datasets.
 
 ## How to execute CLIP-LoRA
