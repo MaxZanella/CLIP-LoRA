@@ -6,7 +6,15 @@ The official implementation of [*Low-Rank Few-Shot Adaptation of Vision-Language
 [Maxime Zanella](https://scholar.google.com/citations?user=FIoE9YIAAAAJ&hl=fr&oi=ao),
 [Ismail Ben Ayed](https://scholar.google.com/citations?user=29vyUccAAAAJ&hl=fr&oi=ao).
 
-We present CLIP-LoRA, an easy-to-use few-shot method for Vision-Language Models with fixed hyperparameters for every task and every number of shots. Here is how to run the experiments:
+We present CLIP-LoRA, an easy-to-use few-shot method for Vision-Language Models with fixed hyperparameters for every task and every number of shots. 
+
+<p align="center">
+  <img src="peft2.jpg" alt="PEFT" width="300" height="250">
+  <br>
+  <em>Figure 1: Low-Rank Adaptation (LoRA) is easy to use and does not create any additional inference latency.</em>
+</p>
+
+Here is how to run the experiments:
 
 1. [Installation](#installation) 
 2. [Usage](#how-to-execute-CLIP-LoRA) 
@@ -19,12 +27,6 @@ Please consider supporting our work:
 
 4. [Citation](#citation)
    
-
-<p align="center">
-  <img src="peft2.jpg" alt="PEFT" width="300" height="250">
-  <br>
-  <em>Figure 1: Low-Rank Adaptation (LoRA) is easy to use and does not create any additional inference latency.</em>
-</p>
 
 ## Installation 
 
