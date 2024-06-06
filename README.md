@@ -44,9 +44,9 @@ You can also exectute CLIP-LoRA on the 10 other datasets:
 python main.py --root_path /path/to/your/data --dataset dataset_name --seed 1
 ```
 
-You can optionally provide a save_path to save the LoRA modules, which can be reload easily with the --eval_only argument. The code will automatically check if you trained your LoRA with the corresponding rank, alpha, encoder, params and position to ensure compatibility. The folder will be structured like that:
+You can optionally provide a save_path to save the LoRA modules, which can be reload easily with the --eval_only argument. The code will automatically check if your trained LoRA with the corresponding rank, alpha, encoder, params and position to ensure compatibility. The folder will be structured like that:
 ```
-save_path
+/your/save/path
 └── backbone
     └── dataset
         └── Xshots
