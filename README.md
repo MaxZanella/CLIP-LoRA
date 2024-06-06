@@ -44,6 +44,20 @@ You can also exectute CLIP-LoRA on the 10 other datasets:
 python main.py --root_path /path/to/your/data --dataset dataset_name --seed 1
 ```
 
+You can optionally provide a save_path to save the LoRA modules, which can be reload easily with the --eval_only argument. The code will automatically check if you trained your LoRA with the corresponding rank, alpha, encoder, params and position to ensure compatibility. The folder will be structured like that:
+```
+save_path
+└── backbone
+    └── dataset
+        └── Xshots
+            ├── seedY
+```
+
+Here is the command line:
+```bash
+python main.py --root_path /path/to/your/data --dataset dataset_name --seed 1 --save_path /your/save/path --eval_only 
+```
+
 ## LoRA in MultiheadAttention
 
 The `PlainMultiheadAttentionLoRA` class in `loralib/layers.py` extends the standard PyTorch multi-head attention mechanism by incorporating Low-Rank Adaptation (LoRA). This class constructs explicit linear modules for each component of the attention mechanism—query (`q`), key (`k`), value (`v`), and output (`o`)—providing a structured and adaptable foundation for your experiments.
