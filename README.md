@@ -26,6 +26,10 @@ A quick guide on how LoRA is implemented in this repository:
 Please consider supporting our work:
 
 4. [Citation](#citation)
+
+If you have any inquiries:
+
+5. [Contact](#contact)
    
 
 ## Installation 
@@ -112,6 +116,11 @@ If you find this project useful, please cite it as follows:
   year={2024}
 }
 ```
+
+## Contact
+
+For any inquiries, feel free to [create an issue](https://github.com/MaxZanella/CLIP-LoRA/issues) or contact us at [maxime.zanella@uclouvain.be](mailto:maxime.zanella@uclouvain.be).
+
 ## Acknowledgement
 
 We express our gratitude to the [CoOp](https://github.com/KaiyangZhou/CoOp) and [Tip-Adapter](https://github.com/gaopengcuhk/Tip-Adapter) authors for their open-source contribution.
