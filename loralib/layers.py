@@ -94,10 +94,7 @@ class LoRALayer():
     def sub_lora_data(self):
         r"""NOT differentiable"""
         for param_name, lora_name in self.params_with_lora.items():
-            if self.training and self.dropout_rate > 0:
-                eval(f'self.{param_name}').data -= self.merge_BA_with_mask(param_name) * self.scaling
-            else:
-                eval(f'self.{param_name}').data -= self.merge_BA(param_name) * self.scaling
+            eval(f'self.{param_name}').data -= self.merge_BA(param_name) * self.scaling
             
     
     def lora_train(self, mode: bool = True):

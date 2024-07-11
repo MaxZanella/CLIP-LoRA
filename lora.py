@@ -132,13 +132,13 @@ def run_lora(args, clip_model, logit_scale, dataset, train_loader, val_loader, t
             current_lr = scheduler.get_last_lr()[0]
             print('LR: {:.6f}, Acc: {:.4f}, Loss: {:.4f}'.format(current_lr, acc_train, loss_epoch))
 
-        """
+        
         # Eval
         if VALIDATION:
             clip_model.eval()
-            acc_val = evaluate_lora(args, clip_model, loader, dataset)
+            acc_val = evaluate_lora(args, clip_model, val_loader, dataset)
             print("**** Val accuracy: {:.2f}. ****\n".format(acc_val))
-        """
+        
     
     acc_test = evaluate_lora(args, clip_model, test_loader, dataset)
     print("**** Final test accuracy: {:.2f}. ****\n".format(acc_test))
