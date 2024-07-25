@@ -107,7 +107,7 @@ lora_mha = PlainMultiheadAttentionLoRA(existing_mha, enable_lora=['q', 'k', 'v',
 ## Few-shot performance
 
 <p align="center">
-  <img src="few_shot.png" alt="few_shot" width="700" height="500">
+  <img src="few_shot.png" alt="few_shot" width="750" height="500">
   <br>
   <em>Figure 2: Detailed few-shot learning results on the 10 fine-grained datasets and ImageNet with the ViT-B/16 visual backbone. Average performance for the ViT-B/16, ViT-B/32 and ViT-L/14 on the same 11 datasets is reported in the last three plots.</em>
 </p>
@@ -117,10 +117,11 @@ lora_mha = PlainMultiheadAttentionLoRA(existing_mha, enable_lora=['q', 'k', 'v',
 If you find this project useful, please cite it as follows:
 
 ```bibtex
-@article{zanella2024low,
+@inproceedings{zanella2024low,
   title={Low-Rank Few-Shot Adaptation of Vision-Language Models},
-  author={Zanella, Maxime and Ayed, Ismail Ben},
-  journal={arXiv preprint arXiv:2405.18541},
+  author={Zanella, Maxime and Ben Ayed, Ismail},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1593--1603},
   year={2024}
 }
 ```
