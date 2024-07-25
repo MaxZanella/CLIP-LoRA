@@ -104,6 +104,14 @@ existing_mha = nn.MultiheadAttention(embed_dim=512, num_heads=8)
 lora_mha = PlainMultiheadAttentionLoRA(existing_mha, enable_lora=['q', 'k', 'v', 'o'], r=4, lora_alpha=2)
 ```
 
+## Few-shot performance
+
+<p align="center">
+  <img src="few_shot.png" alt="few_shot" width="300" height="250">
+  <br>
+  <em>Figure 2: Detailed few-shot learning results on the 10 fine-grained datasets and ImageNet with the ViT-B/16 visual backbone. Average performance for the ViT-B/16, ViT-B/32 and ViT-L/14 on the same 11 datasets is reported in the last three plots, respectively.</em>
+</p>
+
 ## Citation
 
 If you find this project useful, please cite it as follows:
