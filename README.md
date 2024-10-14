@@ -120,7 +120,7 @@ If you find this project useful, please cite it as follows:
 @inproceedings{zanella2024low,
   title={Low-Rank Few-Shot Adaptation of Vision-Language Models},
   author={Zanella, Maxime and Ben Ayed, Ismail},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
   pages={1593--1603},
   year={2024}
 }
